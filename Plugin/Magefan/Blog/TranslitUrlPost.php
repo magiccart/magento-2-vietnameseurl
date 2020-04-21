@@ -1,6 +1,6 @@
 <?php
 
-namespace Magiccart\VietnameseUrl\Plugin\Blog;
+namespace Magiccart\VietnameseUrl\Plugin\Magefan\Blog;
 
 /**
  * Url compatible translit filter

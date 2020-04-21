@@ -23,11 +23,11 @@
     </type>
 
     <type name="Magefan\Blog\Controller\Adminhtml\Post\Save">
-        <plugin name="magiccart_magefan_blog_post" type="Magiccart\VietnameseUrl\Plugin\Blog\TranslitUrlPost"/>
+        <plugin name="magiccart_magefan_blog_post" type="Magiccart\VietnameseUrl\Plugin\Magefan\Blog\TranslitUrlPost"/>
     </type>
 
     <type name="Magefan\Blog\Controller\Adminhtml\Category\Save">
-        <plugin name="magiccart_magefan_blog_category" type="Magiccart\VietnameseUrl\Plugin\Blog\TranslitUrlCategory"/>
+        <plugin name="magiccart_magefan_blog_category" type="Magiccart\VietnameseUrl\Plugin\Magefan\Blog\TranslitUrlCategory"/>
     </type>
 
 
