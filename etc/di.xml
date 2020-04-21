@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Filter\FilterManager\Config">
+        <arguments>
+            <argument name="factories" xsi:type="array">
+                <item xsi:type="string" name="magiccart_unicodeurl_filter_factory">\Magiccart\VietnameseUrl\Filter\Factory</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Catalog\Model\Product\Url">
+        <plugin name="magiccart_unicodeurl_product_url" type="Magiccart\VietnameseUrl\Plugin\Product\Url"/>
+    </type>
+
+    <type name="Magento\Catalog\Model\Category">
+        <plugin name="magiccart_unicodeurl_catalog_magento_catalog_model_category" type="Magiccart\VietnameseUrl\Plugin\Model\Category"/>
+    </type>
+
+    <type name="Magento\Store\App\Request\PathInfoProcessor">
+        <plugin name="magiccart_unicodeurl_request_path_info_processor"
+                type="Magiccart\VietnameseUrl\Plugin\MagentoStore\App\Request\PathInfoProcessor"/>
+    </type>
+
+    <type name="Magefan\Blog\Controller\Adminhtml\Post\Save">
+        <plugin name="magiccart_magefan_blog_post" type="Magiccart\VietnameseUrl\Plugin\Blog\TranslitUrlPost"/>
+    </type>
+
+    <type name="Magefan\Blog\Controller\Adminhtml\Category\Save">
+        <plugin name="magiccart_magefan_blog_category" type="Magiccart\VietnameseUrl\Plugin\Blog\TranslitUrlCategory"/>
+    </type>
+
+
+</config>
