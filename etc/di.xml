@@ -22,13 +22,22 @@
                 type="Magiccart\VietnameseUrl\Plugin\MagentoStore\App\Request\PathInfoProcessor"/>
     </type>
 
-    <type name="Magefan\Blog\Controller\Adminhtml\Post\Save">
+<!--     <type name="Magefan\Blog\Controller\Adminhtml\Post\Save">
         <plugin name="magiccart_magefan_blog_post" type="Magiccart\VietnameseUrl\Plugin\Magefan\Blog\TranslitUrlPost"/>
     </type>
 
     <type name="Magefan\Blog\Controller\Adminhtml\Category\Save">
         <plugin name="magiccart_magefan_blog_category" type="Magiccart\VietnameseUrl\Plugin\Magefan\Blog\TranslitUrlCategory"/>
+    </type> -->
+
+    <preference for="Magefan\Blog\Model\ResourceModel\PageIdentifierGenerator" type="Magiccart\VietnameseUrl\Plugin\Magefan\Blog\TranslitUrlPage" />
+
+    <type name="OlegKoval\RegenerateUrlRewrites\Model\RegenerateProductRewrites">
+        <plugin name="magiccart_olegKoval_product" type="Magiccart\VietnameseUrl\Plugin\Olegkoval\RegenerateCategoryRewrites\TranslitUrlCategory"/>
     </type>
 
+    <type name="OlegKoval\RegenerateUrlRewrites\Model\RegenerateCategoryRewrites">
+        <plugin name="magiccart_olegKoval_category" type="Magiccart\VietnameseUrl\Plugin\Olegkoval\RegenerateCategoryRewrites\TranslitUrlCategory"/>
+    </type>
 
 </config>
